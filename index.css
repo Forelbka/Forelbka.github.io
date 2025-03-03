@@ -1,0 +1,38 @@
+main{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainTextContainer{
+    display: flex;
+    justify-content:center;
+    align-items:first baseline;
+    flex-direction: column;
+    margin-inline: 12vw;
+}
+
+h2{
+    margin-top: 15vh;
+}
+
+.bigSandboxButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-inline: 2vw;
+    border: 2px solid rgb(51, 129, 63);
+    border-radius: 5px;
+    max-width: 25vw;
+    height: 10vh;
+}
+
+.bigSandboxButton:hover{
+    background-color: rgb(51, 129, 63);
+}
+
+.hide{
+    visibility: hidden;
+}

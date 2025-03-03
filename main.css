@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@keyframes fade-in-bottom-normal {0% { transform: translateY(50px); opacity: 0; } 100% { transform: translateY(0); opacity: 1;} }
+@keyframes fade-in-left-normal {0% { transform: translateX(-50px); opacity: 0; } 100% { transform: translateX(0); opacity: 1;} }
+@keyframes fade-in-right-normal {0% { transform: translateX(50px); opacity: 0; } 100% { transform: translateX(0); opacity: 1;} }
+
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in-bottom-normal { 
+    animation: fade-in-bottom-normal 2s ease 100ms 1 normal none;
+    visibility: visible;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in-left-normal { 
+    visibility: visible;
+    animation: fade-in-left-normal 2s ease 100ms 1 normal none; 
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .fade-in-right-normal { 
+    visibility: visible;
+    animation: fade-in-right-normal 2s ease 100ms 1 normal none; 
+    }
+    
+}
+
+
+body{
+    font-family: Roboto, serif;
+    background: rgb(55,71,105);
+    background: linear-gradient(90deg, rgba(55,71,105,1) 0%, rgba(33,48,78,1) 100%); 
+    color: rgb(217, 217, 217);
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:last baseline;
+    margin-top: 30vh;
+    min-height: 30vh;
+    background: rgb(36, 47, 69);
+    padding: 10px;
+}
+
+.footerText{
+    font-size: small;
+    color: rgb(118, 118, 118);
+}
+
+main{
+    min-height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    height: 4rem;
+    background: rgb(36, 47, 69);
+    justify-content:last baseline;
+    align-items: center;
+    flex-direction: row;
+    position: sticky;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-inline: 2vw;
+}
+
+.navlinkContainer{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 2vw;
+    border: 2px solid rgb(51, 129, 63);
+    border-radius: 10px;
+    max-width: 15vw;
+    height: 6vh;
+    min-height: 2rem;
+}
+
+.navlinkContainer:hover{
+    background-color: rgb(51, 129, 63);
+}
+
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 2vw;
+    max-width: 15vw;
+    height: 6vh;
+    min-height: 2rem;
+}
+
+.logoLink{
+    text-decoration: none;
+    max-width: auto;
+    height: 100%;
+}
+
+.logo{
+    max-height: 100%;
+
+}
+
+.inactive{
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sandbox</title>
+
+    <link rel="stylesheet" type="text/css" href="CodeMirror/codemirror.min.css">
+    <!-- Добавляем тему Dracula -->
+    <link rel="stylesheet" type="text/css" href="CodeMirror/dracula.min.css">
+    <!-- Добавляем CSS для автодополнения -->
+    <link rel="stylesheet" type="text/css" href="CodeMirror/show-hint.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="sandbox.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_io/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/editor/editor.main.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html"><div class="logoContainer"><a href="index.html" class="logoLink"><img src="img/logo.png" alt="Logo" class="logo"></a></div></a>
+        <a href="sandbox.html"><div class="navlinkContainer"><a href="sandbox.html" class="nav-link sandboxLink">Начать работу</a></div></a>
+        <a href="aboutus.html"><div class="navlinkContainer"><a href="aboutus.html" class="nav-link aboutusLink">О нас</a></div></a>
+    </nav>
+    <main>
+        <div class="codeArea">
+            <div class="codeControlPanel">
+                <button id="runButton">Run</button>
+                <button id="LiveModeButton" class="LiveModeButton">Live mode</button>
+                <button id="JSButton" class="languageButton activeLB">JavaScript</button>
+                <button id="HTMLButton" class="languageButton">HTML</button>
+                <button id="CSSButton" class="languageButton">CSS</button>
+            </div>
+            <div class="innerCodeArea">
+                <div class="fields">
+                    <div class="JScontainer"><div name="code " id="codeFieldJS" style="height: 100%; width: 100%;"></div></div>
+                    <div class="HTMLcontainer inactive"><div name="code" id="codeFieldHTML" style="height: 100%; width: 100%;"></div></div>
+                    <div class="CSScontainer inactive"><div name="code" id="codeFieldCSS" style="height: 100%; width: 100%;"></div></div>
+                </div>  
+                <iframe src="about:blank" id="sandbox" sandbox="allow-scripts allow-same-origin" onerror="handleIFrameError(event)"></iframe>
+            </div>
+            <div id="codeOutput" class="codeOutput"></div>
+        </div>
+        
+    </main>
+    <footer>
+        <p class="footerText">Услуги предоставляются ООО "Какие люди".</p>
+        <p class="footerText">Организация не несет ответственности в случае получения травм или смерти в результате использования сервиса.</p>
+        <p class="footerText">2025 Все права защищены.</p>
+    </footer>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.37.0/min/vs/loader.min.js"></script>
+
+<script src="sandbox.js"></script>
+<script src="animations.js"></script>
+</html>
