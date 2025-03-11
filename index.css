@@ -13,6 +13,11 @@ main{
     margin-inline: 12vw;
 }
 
+.githubLink{
+    text-decoration: none;
+    color: rgb(51, 129, 63);
+}
+
 h2{
     margin-top: 15vh;
 }

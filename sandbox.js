@@ -95,7 +95,7 @@ function initEditors() {
         theme: 'vs-dark',
         fontSize: 14,
         minimap: {
-            enabled: true
+            enabled: false
         },
         automaticLayout: true,
         scrollBeyondLastLine: false,
@@ -117,7 +117,7 @@ function initEditors() {
     cssEditor = monaco.editor.create(document.getElementById('codeFieldCSS'), {
         ...editorOptions,
         language: 'css',
-        value: /*css*/`/* CSS code */
+        value: `/* CSS code */
 body {
     font-family: Arial;
 }
@@ -127,7 +127,7 @@ body {
     htmlEditor = monaco.editor.create(document.getElementById('codeFieldHTML'), {
         ...editorOptions,
         language: 'html',
-        value: /*html*/`<!-- HTML code -->
+        value: `<!-- HTML code -->
 <html>
     <head>
         <title>Example</title>
@@ -207,9 +207,9 @@ editors.forEach(editor => {
 })
 
 LiveButton.addEventListener('click', function() {
-    
     LiveMode = !LiveMode;
     if (LiveMode){
+        alert("При использовании LiveMode избегайте бесконечных циклов")
         LiveButton.classList.add('activeLMB')
         runCode();
         editors.forEach(editor => {
@@ -233,9 +233,6 @@ LiveButton.addEventListener('click', function() {
 }
 
 require(['vs/editor/editor.main'], initEditors);
-
-console.log(jsEditor)
-
 
 
 function setEditorToJS(){
