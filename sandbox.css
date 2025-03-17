@@ -130,6 +130,26 @@
     margin-bottom: 0.3rem;
 }
 
+.problemButton{
+    background-color: rgb(38, 215, 6);
+    border: 2px solid black;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    font-size: 1.2rem;
+    margin-inline: 0.5rem;
+}
+
+.problemButton:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.problemButtonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .log{ 
     color: rgb(1, 169, 1);
 }
