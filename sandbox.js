@@ -289,7 +289,7 @@ function handleIFrameError(event) {
 sandbox.addEventListener('error', handleIFrameError);
 
 
-// Catch errors when loading the iframe
+
 sandbox.addEventListener('error', function(event) {
     codeOutput.innerHTML = '';
     codeOutput.innerHTML += "<p class='error output'>Error loading iframe content: " + 
